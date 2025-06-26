@@ -1,0 +1,44 @@
+<!-- Exercício 1: Alteração Dinâmica de Título e Parágrafo 
+HTML: Deve conter um título principal e um parágrafo inicial, além de um botão de ação.
+JavaScript: Ao clicar no botão, o texto do título e do parágrafo devem ser alterados para novos conteúdos definidos pelo JavaScript.   
+!-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios</title>
+</head>
+    <style>
+        #meuRetangulo {
+            width: 200px;
+            height: 100px;
+            background-color: teal;
+            border: 2px solid black;
+            margin-top: 20px;
+        }
+
+    </style>
+<body>
+
+    <!--HTML: Deve haver um elemento visual (ex: um quadrado ou um retângulo) com uma cor de fundo inicial e um botão.!-->
+    <div id="meuRetangulo"></div>
+    <button id="botao">Botão</button>
+    
+
+ <!--JavaScript: Ao clicar no botão, a cor de fundo do elemento visual deve mudar para uma cor diferente.-->   
+<script>
+    
+
+    const elemento = document.getElementById("meuRetangulo");
+    const button = document.getElementById("botao")
+
+    button.addEventListener("click", function () {
+        elemento.style.backgroundColor = "black";
+    });
+
+</script>
+
+</body>
+</html>

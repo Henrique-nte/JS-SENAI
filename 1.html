@@ -1,0 +1,30 @@
+<!-- Exercício 1: Alteração Dinâmica de Título e Parágrafo 
+HTML: Deve conter um título principal e um parágrafo inicial, além de um botão de ação.
+JavaScript: Ao clicar no botão, o texto do título e do parágrafo devem ser alterados para novos conteúdos definidos pelo JavaScript.   
+!-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios</title>
+</head>
+<body>
+
+    <h1 id="titulo">Hello World</h1>
+    <button id="botao">Botão</button>
+    
+<script>
+    //Altera titulo
+    const titulo = document.getElementById("titulo");
+    const button = document.getElementById("botao");
+
+    button.addEventListener("click", function () {
+        titulo.textContent = "Hello YOU";
+    });
+
+</script>
+
+</body>
+</html>

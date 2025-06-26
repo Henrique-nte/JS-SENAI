@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"> <!-- Define o conjunto de caracteres (UTF-8). -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsividade para dispositivos móveis. -->
+    <title>Js</title> <!-- Título da aba do navegador. -->
+</head>
+
+<body>
+    <h1 id="h1">Hello World</h1> <!-- Título principal com ID (adicionado o id que faltava no JS). -->
+    <h2 id="here"></h2> <!-- Elemento que será manipulado pelo JS. -->
+    <h3 class="h3">Teste 1</h3> <!-- Elemento com classe. -->
+    <div id="bloco"></div> <!-- Div para manipular conteúdo via JS. -->
+    <img id="lenin" src="https://via.placeholder.com/150" alt="Imagem do Lenin"> <!-- Imagem com ID. -->
+
+
+    <button id="botao"></button>
+    <button onclick="">Outro Botao</button>
+
+    <script>
+        // Exibe mensagens no console
+        console.log("Hello World");       // Mensagem normal
+        console.error("Deu erro");        // Mensagem de erro
+        console.warn("Aviso");           // Mensagem de aviso
+
+        // Imprime no corpo da página
+        document.write("<h3>Hello</h3>");
+
+        // Pegando elementos do DOM
+        const h2 = document.getElementById("here"); // Corrigido ID usado (antes era "h2" inexistente)
+        console.log(h2);
+
+        const h1 = document.querySelector("#h1"); // Seleciona pelo ID
+        console.log(h1);
+
+        const h3 = document.querySelector(".h3"); // Corrigido "documento" para "document"
+        console.log(h3);
+
+        // Manipulando o conteúdo do elemento
+        h2.textContent = "Trocar Texto"; // Troca o texto visível do h2
+
+        // Manipulando HTML dentro da div
+        const div = document.getElementById("bloco");
+        div.innerHTML = "<h1>Título do bloco</h1>"; // Insere HTML dentro da div
+
+        // Manipulação de atributos e estilo da imagem
+        const img = document.getElementById("lenin");
+
+        console.log(img.getAttribute("src")); // Mostra o caminho da imagem atual
+        img.setAttribute("src", "https://pcdob.org.br/wp-content/uploads/2020/04/Vladimir-Serov-1952-1-Lenin-en-Smolny-1024x638.jpg"); // Altera a imagem (link corrigido para funcionar)
+
+        // Estiliza a imagem com borda e bordas arredondadas
+        img.style.border = "1px solid black";
+        img.style.borderRadius = "10px";
+
+        //Eventos
+        const button = document.getElementById("botao")
+        button.addEventListener("click", function(){
+            console.log("Entrou")
+            img.setAttribute("src", "https://static.todamateria.com.br/upload/re/vr/revrussalenindiscursa-cke.jpg")
+        })
+
+        function trocaImagem{
+            img.setAttribute("src", "https://www.meisterdrucke.pt/kunstwerke/1260px/Isaak_Israilevich_Brodsky_-_Russian_Revolution_of_1917_Lenin_speaking_to_the_workers_of_the_Putilov_factory_-_%28MeisterDrucke-1022660%29.jpg")
+        }
+
+
+            
+    </script>
+</body>
+</html>
