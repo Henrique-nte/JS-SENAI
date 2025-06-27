@@ -8,27 +8,50 @@
 </head>
 
 <style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #000000;
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+
     .imagem {
         width: 900px;
-        margin: 1px;
+        border: 2px solid #fff;
+        border-radius: 5px;
     }
 
     #botao {
-        position: absolute;
-        padding: 7px;
-        background-color: rgb(202, 202, 202);
-        border: 1px solid #000000;
-        border-radius: 5px;
-        width: 70px;
-        transition: transform 0.2s ease;
+        margin-top: 30px;
+        padding: 10px 20px;
+        background-color: #333;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 16px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
     }
 
     #botao:hover {
-        transform: scale(1.1);
+        background-color: #555;
+        transform: scale(1.05);
+    }
+
+    h1 {
+        color: #fff;
     }
 </style>
 
 <body>
+
+    <h1 class="titulo">Imagem 1</h1>
 
     <div class="imagens">
 
@@ -38,9 +61,12 @@
 
     </div>
 
-    <button id="botao">Substituir</button>
+    <div class="center">
+        <button id="botao">Substituir</button>
+    </div>
 
     <script>
+        const titulo = documento.getElementClass
         const img1 = document.getElementById("img1");
         const img2 = document.getElementById("img2");
         const img3 = document.getElementById("img3");
