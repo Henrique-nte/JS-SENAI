@@ -9,11 +9,12 @@
 
 <style>
     .imagem {
-        width: 250px;
+        width: 900px;
         margin: 1px;
     }
 
     #botao {
+        position: absolute;
         padding: 7px;
         background-color: rgb(202, 202, 202);
         border: 1px solid #000000;
@@ -50,12 +51,18 @@
         img3.style.display = "none";
 
         button.addEventListener("click", function () {
-            img1.style.display = "none";
-            img2.style.display = "block";
+            if (img1.style.display != "none") {
+                img1.style.display = "none";
+                img2.style.display = "block";
+            } else if (img2.style.display != "none") {
+                img2.style.display = "none";
+                img3.style.display = "block";
+            } else if (img3.style.display != "none") {
+                img3.style.display = "none";
+                img1.style.display = "block";
+            }
+
         })
-
-
-
 
     </script>
 
