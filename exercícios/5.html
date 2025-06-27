@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navegação entre Imagens</title>
+</head>
+
+<style>
+    .imagem {
+        width: 250px;
+        margin: 1px;
+    }
+
+    #botao {
+        padding: 7px;
+        background-color: rgb(202, 202, 202);
+        border: 1px solid #000000;
+        border-radius: 5px;
+        width: 70px;
+        transition: transform 0.2s ease;
+    }
+
+    #botao:hover {
+        transform: scale(1.1);
+    }
+</style>
+
+<body>
+
+    <div class="imagens">
+
+        <img src="img/lenin.jpg" class="imagem" id="img1">
+        <img src="img/leno.jpg" class="imagem" id="img2">
+        <img src="img/lenu.jpg" class="imagem" id="img3">
+
+    </div>
+
+    <button id="botao">Substituir</button>
+
+    <script>
+        const img1 = document.getElementById("img1");
+        const img2 = document.getElementById("img2");
+        const img3 = document.getElementById("img3");
+        const button = document.getElementById("botao");
+
+        //img1.style.display = "none";
+        img2.style.display = "none";
+        img3.style.display = "none";
+
+        button.addEventListener("click", function () {
+            img1.style.display = "none";
+            img2.style.display = "block";
+        })
+
+
+
+
+    </script>
+
+</body>
+
+</html>
