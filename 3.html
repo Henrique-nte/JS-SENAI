@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alternar Visibilidade de Conteúdo</title>
+</head>
+<style>
+  #bloco {
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+    margin-top: 15px;
+
+  }
+
+  #botao {
+    padding: 4px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 60px;
+    transition: transform 0.2s ease;
+  }
+
+  #botao:hover {
+    transform: scale(1.1);
+  }
+</style>
+
+
+<body>
+
+
+  <button id="botao">Botao</button>
+  <div id="bloco">Hello World</div>
+
+
+  <script>
+    const bloco = document.getElementById("bloco")
+    const button = document.getElementById("botao")
+
+    button.addEventListener("click", function () {
+      if (bloco.style.display === "none") {
+        bloco.style.display = "block";
+        bloco.style.position = "fixed"
+      } else {
+        bloco.style.display = "none";
+      }
+    });
+
+  </script>
+
+</body>
+
+</html>

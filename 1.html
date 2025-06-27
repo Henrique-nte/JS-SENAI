@@ -5,26 +5,32 @@ JavaScript: Ao clicar no botão, o texto do título e do parágrafo devem ser al
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercícios</title>
+    <title>Alteração Dinâmica de Título e Parágrafo</title>
 </head>
+
 <body>
 
     <h1 id="titulo">Hello World</h1>
+    <p id="p">How are you</p>
     <button id="botao">Botão</button>
-    
-<script>
-    //Altera titulo
-    const titulo = document.getElementById("titulo");
-    const button = document.getElementById("botao");
 
-    button.addEventListener("click", function () {
-        titulo.textContent = "Hello YOU";
-    });
+    <script>
+        //Altera titulo
+        const titulo = document.getElementById("titulo");
+        const button = document.getElementById("botao");
+        const paragrafo = document.getElementById("p");
 
-</script>
+        button.addEventListener("click", function () {
+            titulo.textContent = "Hello YOU";
+            paragrafo.textContent = "Good"
+        });
+
+    </script>
 
 </body>
+
 </html>
