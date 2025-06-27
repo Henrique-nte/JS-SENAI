@@ -44,14 +44,14 @@
         transform: scale(1.05);
     }
 
-    h1 {
+    #titulo {
         color: #fff;
     }
 </style>
 
 <body>
 
-    <h1 class="titulo">Imagem 1</h1>
+    <h1 id="titulo">Imagem 1</h1>
 
     <div class="imagens">
 
@@ -66,7 +66,7 @@
     </div>
 
     <script>
-        const titulo = documento.getElementClass
+        const titulo = document.getElementById("titulo")
         const img1 = document.getElementById("img1");
         const img2 = document.getElementById("img2");
         const img3 = document.getElementById("img3");
@@ -80,12 +80,16 @@
             if (img1.style.display != "none") {
                 img1.style.display = "none";
                 img2.style.display = "block";
+                titulo.textContent = "Imagem 2";
+
             } else if (img2.style.display != "none") {
                 img2.style.display = "none";
                 img3.style.display = "block";
+                titulo.textContent = "Imagem 3";
             } else if (img3.style.display != "none") {
                 img3.style.display = "none";
                 img1.style.display = "block";
+                titulo.textContent = "Imagem 1";
             }
 
         })
