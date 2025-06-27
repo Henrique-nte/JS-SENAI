@@ -26,6 +26,7 @@ JavaScript: Ao clicar no botão, o texto do título e do parágrafo devem ser al
 
     <!--HTML: Deve haver um elemento visual (ex: um quadrado ou um retângulo) com uma cor de fundo inicial e um botão.!-->
     <div id="meuRetangulo"></div>
+
     <button id="botao">Botão</button>
 
 
@@ -34,10 +35,13 @@ JavaScript: Ao clicar no botão, o texto do título e do parágrafo devem ser al
 
 
         const elemento = document.getElementById("meuRetangulo");
+
         const button = document.getElementById("botao")
 
         button.addEventListener("click", function () {
+
             elemento.style.backgroundColor = "black";
+
         });
 
     </script>

@@ -56,7 +56,9 @@
     <div class="imagens">
 
         <img src="img/lenin.jpg" class="imagem" id="img1">
+
         <img src="img/leno.jpg" class="imagem" id="img2">
+
         <img src="img/lenu.jpg" class="imagem" id="img3">
 
     </div>
@@ -67,29 +69,37 @@
 
     <script>
         const titulo = document.getElementById("titulo")
+
         const img1 = document.getElementById("img1");
         const img2 = document.getElementById("img2");
         const img3 = document.getElementById("img3");
+
         const button = document.getElementById("botao");
 
         //img1.style.display = "none";
+
         img2.style.display = "none";
         img3.style.display = "none";
 
         button.addEventListener("click", function () {
             if (img1.style.display != "none") {
+
                 img1.style.display = "none";
                 img2.style.display = "block";
                 titulo.textContent = "Imagem 2";
 
             } else if (img2.style.display != "none") {
+
                 img2.style.display = "none";
                 img3.style.display = "block";
                 titulo.textContent = "Imagem 3";
+
             } else if (img3.style.display != "none") {
+
                 img3.style.display = "none";
                 img1.style.display = "block";
                 titulo.textContent = "Imagem 1";
+
             }
 
         })

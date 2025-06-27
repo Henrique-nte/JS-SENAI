@@ -36,20 +36,28 @@
 
 
   <button id="botao">Botao</button>
+
   <div id="bloco">Hello World</div>
 
 
   <script>
     const bloco = document.getElementById("bloco")
+
     const button = document.getElementById("botao")
 
     button.addEventListener("click", function () {
+
       if (bloco.style.display === "none") {
+
         bloco.style.display = "block";
         bloco.style.position = "fixed"
+
       } else {
+
         bloco.style.display = "none";
+
       }
+
     });
 
   </script>

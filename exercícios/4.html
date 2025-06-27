@@ -10,20 +10,24 @@
 <body>
 
     <h1 id="numero">1</h1>
+
     <button id="botao">+</button>
 
 
     <script>
 
         const Elemento = document.getElementById("numero");
+
         const botao = document.getElementById("botao");
 
         //
         let numero = parseInt(Elemento.innerText);
 
         botao.addEventListener("click", function () {
+
             numero++;
             Elemento.innerText = numero;
+
         });
 
     </script>
