@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterar Cor de Fundo da Página</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body id = "body">
+    
+    <button id = "Rubra">Rubra</button>
+    <button id = "Cáqui">Cáqui</button>
+    <button id = "Ocre">Ocre</button>
+    <button id = "Margenta">Magenta</button>
+    <button id = "Turquesa">Turquesa</button>
+
+
+
+    <script>
+
+        const body = document.getElementById("body")
+
+        const rubra = document.getElementById("Rubra")
+        const caqui = document.getElementById("Cáqui")
+        const ocre = document.getElementById("Ocre")
+        const margenta = document.getElementById("Margenta")
+        const turquesa = document.getElementById("Turquesa")
+
+        rubra.addEventListener("click", function(){
+            body.style.backgroundColor = "#FF0000";
+        })
+        caqui.addEventListener("click", function(){
+            body.style.backgroundColor = "#C3B091";
+        })
+        ocre.addEventListener("click", function(){
+            body.style.backgroundColor = "#CC7722";
+        })
+        margenta.addEventListener("click", function(){
+            body.style.backgroundColor = "#FF00FF";
+        })
+        turquesa.addEventListener("click", function(){
+            body.style.backgroundColor = "#40E0D0";
+        })
+
+
+
+    </script>
+</body>
+</html>

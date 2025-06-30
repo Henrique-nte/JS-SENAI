@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alternar Estilo com Classe CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<style>
+
+    .paragrafo{
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 25px;
+    }
+    .paragrafo_alternativo{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 35px;   
+    }
+</style>
+
+<body>
+    
+    <p id = "p" class="paragrafo" >Parágrafo</p>
+    <p id = "pa">Classe 1</p>
+    <button id = "botao">Remover/Adicionar</button>
+    
+    <script>
+
+        const paragrafo = document.getElementById("p");
+        const button = document.getElementById("botao");
+        const pa = document.getElementById("pa")
+
+        button.addEventListener("click", function(){
+            
+
+            if (paragrafo.className == "paragrafo"){
+
+                paragrafo.className = "paragrafo_alternativo";
+                pa.textContent = "Classe 2";
+
+            }
+            else{
+
+                paragrafo.className = "paragrafo";
+                pa.textContent = "Classe 1";
+
+            }
+        });
+
+    </script>
+</body>
+</html>

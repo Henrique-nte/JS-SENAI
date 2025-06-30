@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Adição Simples</title>
+</head>
+
+<style>
+    
+    body {
+    display: flex;
+    flex-direction: column;
+    align-items: start; 
+    gap: 10px; 
+    }
+    
+</style>
+
+<body>
+
+    <input id = "none" type="number" name="texto">
+    <input id = "ntwo" type="number" name="texto">
+
+    <button id = "add">+</button>
+
+    <h2>Resultado</h2>
+    <h2 id = "resul"></h2>
+
+    <script>
+
+        const none = document.getElementById("none");
+        const ntwo = document.getElementById("ntwo");
+
+        const button = document.getElementById("add");
+
+        const exibir = document.getElementById("resul")
+
+
+        button.addEventListener("click", function(){
+            
+            let on = none.value;
+            let tw = ntwo.value;
+
+            let one = parseInt(on)
+            let two = parseInt(tw)
+    
+            let resul = 0;
+            resul = one + two;
+            exibir.innerHTML = resul;
+            
+        });
+
+    </script>
+    
+</body>
+</html>
